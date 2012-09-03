@@ -1,0 +1,373 @@
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #61B039;
+    text-shadow: none;
+}
+
+::selection {
+    background: #61B039;
+    text-shadow: none;
+}
+
+/* ==========================================================================
+   HTC One X CSS3
+   ========================================================================== */
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*{
+	font-size: 6px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+	background: rgb(125,126,125);
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1)));
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
+	background: radial-gradient(ellipse at center,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
+	background-size: 100% 100%;
+}
+
+.phone{
+	width: 37.4em;
+	height: 73.4em;
+	position: absolute;
+	margin: -36.85em 0 0 -18.7em;
+	left: 50%;
+	top: 50%;
+	background-color: #fbfbfb;
+	-webkit-box-shadow: inset 0 0 0.1em rgba(16,16,16,.04), inset 0 0 2px rgba(16,16,16,.1);
+	-moz-box-shadow: inset 0 0 0.1em rgba(16,16,16,.04), inset 0 0 2px rgba(16,16,16,.1);
+	box-shadow: inset 0 0 0.1em rgba(16,16,16,.04), inset 0 0 2px rgba(16,16,16,.1);
+	border-top-left-radius: 6em 5em;
+	border-top-right-radius: 6em 5em;
+	border-bottom-left-radius: 7em 6em;
+	border-bottom-right-radius: 7em 6em;
+	box-shadow: 0em -2em 10em rgba(177,87,92,0.2);
+}
+
+.body{
+	width: 37.4em;
+	height: 72em;
+	margin-top: 0.6em;
+	background-color: #fbfbfb;
+	background-image: -webkit-linear-gradient(left, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	background-image: -moz-linear-gradient(left, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	background-image: -o-linear-gradient(left, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	background-image: -ms-linear-gradient(left, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	background-image: linear-gradient(to right, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	border-top-left-radius: 6em 5em;
+	border-top-right-radius: 6em 5em;
+	border-bottom-left-radius: 6em 5em;
+	border-bottom-right-radius: 6em 5em;
+	box-shadow: -2em 2em 10em rgba(153,199,214,0.3);
+}
+
+.body_noise{
+	background-image: url(../img/noise.png);
+	width: 37.4em;
+	height: 72em;
+	margin-top: 0.6em;
+	border-top-left-radius: 6em 5em;
+	border-top-right-radius: 6em 5em;
+	border-bottom-left-radius: 6em 5em;
+	border-bottom-right-radius: 6em 5em;
+}
+
+.shadow{
+	background-color: #fbfbfb;
+	-webkit-box-shadow: inset 0 0 0.1em rgba(16,16,16,.08);
+	-moz-box-shadow: inset 0 0 0.1em rgba(16,16,16,.08);
+	box-shadow: inset 0 0 0.1em rgba(16,16,16,.08);
+	background-image: -webkit-linear-gradient(left, #c1c1c1, #9b9b9b 51%, #b6b6b6);
+	background-image: -moz-linear-gradient(left, #c1c1c1, #9b9b9b 51%, #b6b6b6);
+	background-image: -o-linear-gradient(left, #c1c1c1, #9b9b9b 51%, #b6b6b6);
+	background-image: -ms-linear-gradient(left, #c1c1c1, #9b9b9b 51%, #b6b6b6);
+	background-image: linear-gradient(to right, #c1c1c1, #9b9b9b 51%, #b6b6b6);
+	padding-bottom: 0.5em;
+	border-top-left-radius: 6em 5em;
+	border-top-right-radius: 6em 5em;
+	border-bottom-left-radius: 6em 5em;
+	border-bottom-right-radius: 6em 5em;
+}
+
+.shadow_inner{
+	background-color: #fbfbfb;
+	background-image: -webkit-linear-gradient(left, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	background-image: -moz-linear-gradient(left, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	background-image: -o-linear-gradient(left, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	background-image: -ms-linear-gradient(left, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	background-image: linear-gradient(to right, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
+	border-top-left-radius: 6em 5em;
+	border-top-right-radius: 6em 5em;
+	border-bottom-left-radius: 6em 5em;
+	border-bottom-right-radius: 6em 5em;
+	padding-bottom: 3.7em;
+}
+
+.volume_rocker{
+	width: 0.2em;
+	height: 8.6em;
+	-webkit-border-radius: 0.1em 0 0/0.5em 0 0;
+	-moz-border-radius: 0.1em 0 0/0.5em 0 0;
+	border-radius: 0.1em 0 0/0.5em 0 0;
+	background-color: #959595;
+	background-image: -webkit-linear-gradient(left, rgba(16,16,16,.13), rgba(255,255,255,.13));
+	background-image: -moz-linear-gradient(left, rgba(16,16,16,.13), rgba(255,255,255,.13));
+	background-image: -o-linear-gradient(left, rgba(16,16,16,.13), rgba(255,255,255,.13));
+	background-image: -ms-linear-gradient(left, rgba(16,16,16,.13), rgba(255,255,255,.13));
+	background-image: linear-gradient(to right, rgba(16,16,16,.13), rgba(255,255,255,.13));
+	position: absolute;
+	right: -0.1em;
+	top: 16.5em;
+}
+
+.speaker_camera{
+	width: 30em;
+	height: 2.4em;
+	margin: 0 auto;
+	position: relative;
+	top: 0.8em;
+}
+
+.speaker{
+	color: black;
+	text-align: center;
+	width: 16em;
+	height: 0.8em;
+	margin: 0 auto;
+	background: rgb(0,0,0);
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 20%, rgba(255,255,255,0) 21%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(20%,rgba(0,0,0,1)), color-stop(21%,rgba(255,255,255,0)));
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 20%,rgba(255,255,255,0) 21%);
+	background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 20%,rgba(255,255,255,0) 21%);
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 20%,rgba(255,255,255,0) 21%);
+	background: radial-gradient(ellipse at center,  rgba(0,0,0,1) 20%,rgba(255,255,255,0) 21%);
+	background-size: 0.6em;
+}
+
+.camera_back{
+	width: 1.6em;
+	height: 1.6em;
+	-webkit-border-radius: 1.6em;
+	-moz-border-radius: 1.6em;
+	border-radius: 1.6em;
+	background-color: #0e0e0e;
+	border: solid 0.1em #060606;
+	background-image: -webkit-linear-gradient(top, rgba(16,16,16,.04), rgba(255,255,255,.04));
+	background-image: -moz-linear-gradient(top, rgba(16,16,16,.04), rgba(255,255,255,.04));
+	background-image: -o-linear-gradient(top, rgba(16,16,16,.04), rgba(255,255,255,.04));
+	background-image: -ms-linear-gradient(top, rgba(16,16,16,.04), rgba(255,255,255,.04));
+	background-image: linear-gradient(to bottom, rgba(16,16,16,.04), rgba(255,255,255,.04));
+	float: right;
+	position: relative;
+	top: -1.6em;
+	right: 3em;
+}
+
+.camera_inner{
+	width: 0.6em;
+	height: 0.6em;
+	-webkit-border-radius: 0.6em;
+	-moz-border-radius: 0.6em;
+	border-radius: 0.6em;
+	background-color: #151515;
+	-webkit-box-shadow: inset 0 0 #101010;
+	-moz-box-shadow: inset 0 0 #101010;
+	box-shadow: inset 0 0 #101010;
+	border: solid 0.1em rgba(255,255,255,.05);
+	margin: 0.4em auto 0;
+}
+
+.display_back{
+	width: 35.9em;
+	height: 67.5em;
+	margin-top: 1em;
+	margin-left: 0.6em;
+	background-color:#313131;
+	-webkit-box-shadow: inset 0 0 #101010;
+	-moz-box-shadow: inset 0 0 #101010;
+	box-shadow: inset 0 0 #101010;
+	border: solid 0.1em rgba(255,255,255,.26);
+	background-image: -webkit-linear-gradient(left, #050505, #323232 2%, #050505 2%, #4d4d4d 5%, #000 96%, #565656 98%, #000);
+	background-image: -moz-linear-gradient(left, #050505, #323232 2%, #050505 2%, #4d4d4d 5%, #000 96%, #565656 98%, #000);
+	background-image: -o-linear-gradient(left, #050505, #323232 2%, #050505 2%, #4d4d4d 5%, #000 96%, #565656 98%, #000);
+	background-image: -ms-linear-gradient(left, #050505, #323232 2%, #050505 2%, #4d4d4d 5%, #000 96%, #565656 98%, #000);
+	background-image: linear-gradient(to right, #050505, #323232 2%, #050505 2%, #4d4d4d 5%, #000 96%, #565656 98%, #000);
+	border-top-left-radius: 5em 5em;
+	border-top-right-radius: 5em 5em;
+	border-bottom-left-radius: 5em 5em;
+	border-bottom-right-radius: 5em 5em;
+}
+
+.display{
+	width: 34.7em;
+	height: 66.3em;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+	background-color: #505050;
+	border: solid 0.1em #121212;
+	background-image: -webkit-linear-gradient(left, #262626, #585858 1%, #0f0f0f 1%, #090909 4%, #090909 95%, #111 99%, #2c2c2c 99%, #111, #2c2c2c);
+	background-image: -moz-linear-gradient(left, #262626, #585858 1%, #0f0f0f 1%, #090909 4%, #090909 95%, #111 99%, #2c2c2c 99%, #111, #2c2c2c);
+	background-image: -o-linear-gradient(left, #262626, #585858 1%, #0f0f0f 1%, #090909 4%, #090909 95%, #111 99%, #2c2c2c 99%, #111, #2c2c2c);
+	background-image: -ms-linear-gradient(left, #262626, #585858 1%, #0f0f0f 1%, #090909 4%, #090909 95%, #111 99%, #2c2c2c 99%, #111, #2c2c2c);
+	background-image: linear-gradient(to right, #262626, #585858 1%, #0f0f0f 1%, #090909 4%, #090909 95%, #111 99%, #2c2c2c 99%, #111, #2c2c2c);
+	border-top-left-radius: 5em 5em;
+	border-top-right-radius: 5em 5em;
+	border-bottom-left-radius: 5em 5em;
+	border-bottom-right-radius: 5em 5em;
+}
+
+.logo{
+	font-family: icomoon;
+	color: #fff;
+	float: left;
+	font-size: 5em;
+	text-align: center;
+	width: 6.96em;
+	position: relative;
+	top: -0.1em;
+	height: 5.5em;
+}
+
+.display_stuff{
+	width: 33em;
+	height: 55em;
+	top: 4em;
+	margin: 0 auto;
+	position: relative;
+	background-color: #F0F0EC;
+	border-radius: 0.5em;
+}
+
+.display_stuff img{
+	position: absolute;
+	left: 0;
+	max-height: 55em;
+	margin: 0 0.5em;
+}
+
+nav.menu{
+	width: 34em;
+	margin: 0 auto;
+	position: relative;
+	bottom: -5.5em;
+}
+
+nav.menu a{
+	font-family: icomoon;
+	color: #474747;
+	text-decoration: none;
+	font-size: 1.5em;
+	line-height: 3em;
+	margin: 0 3.1em;
+}
+
+nav.menu a:hover{
+	color: #fff;
+	text-shadow: 0 0 2px rgba(255,255,255,0.5);
+}
+
+.phone_shadow{
+	width: 26em;
+	height: 1em;
+	background-color: transparent;
+	position: absolute;
+	margin: 37.5em 0 0 -13em;
+	left: 50%;
+	top: 50%;
+	box-shadow: 0 0 4em rgba(0,0,0,1);
+}
+
+.phone_shadow{
+	margin-left: -44em; 
+}
+
+.phone{
+	margin-left: -50em;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+.info{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -30em 0 0 0;
+	width: 50em;
+	height: 10em;
+}
+
+.htc{
+	color: #000;
+	font-size: 3em;
+	line-height: 2em;
+	border-bottom: 0.1em solid #000;
+}
+
+.htc:before{
+	content: "!";
+	font-family: icomoon;
+	font-size: 4em;
+	position: relative;
+	top: 0.3em;
+	padding-right: 0.2em;
+}
+
+.htc:after{
+	content: "by ::eboye::";
+	font-size: 0.7em;
+	padding-left: 6em;
+	font-style: italic;
+	color: #5FAE37;
+}
+
+.about{
+	color: #fff;
+	font-size: 3em;
+	line-height: 1.2em;
+	font-weight: bold;
+}
+
+.buy{
+	width: 8em;
+	height: 2em;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	font-size: 2em;
+	line-height: 2.1em;
+	padding-left: 1em;
+	text-shadow: 0 -0.05em 0 rgba(0,0,0,0.6);
+	border-radius: 1em;
+	background-image: -webkit-linear-gradient(bottom, #5fae37, #8fd058 95%, #d4eebe 95%, #8fd058, #d4eebe);
+	background-image: -moz-linear-gradient(bottom, #5fae37, #8fd058 95%, #d4eebe 95%, #8fd058, #d4eebe);
+	background-image: -o-linear-gradient(bottom, #5fae37, #8fd058 95%, #d4eebe 95%, #8fd058, #d4eebe);
+	background-image: -ms-linear-gradient(bottom, #5fae37, #8fd058 95%, #d4eebe 95%, #8fd058, #d4eebe);
+	background-image: linear-gradient(to top, #5fae37, #8fd058 95%, #d4eebe 95%, #8fd058, #d4eebe);
+	box-shadow: 0 0.3em 0.5em rgba(0,0,0,0.4);
+}
+
+.buy:hover{
+	box-shadow: 0 0.5em 0.5em rgba(0,0,0,0.4);
+	margin-top: -0.2em;
