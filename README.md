@@ -22,7 +22,7 @@ http://urban-design.org.uk/hoxcss3/
 Copyright and license
 -----------
 
-Copyright 2012 Root Zebra, Ltd.
+Copyright 2012 SrboDroid, Ltd.
 
 Licensed under the Creative Commons License, Version 3.0
 
