@@ -22,7 +22,7 @@ http://urban-design.org.uk/hoxcss3/
 Copyright and license
 -----------
 
-Copyright 2012 SrboDroid, Ltd.
+Copyright 2012 SrboDroid.
 
 Licensed under the Creative Commons License, Version 3.0
 
