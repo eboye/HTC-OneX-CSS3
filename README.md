@@ -17,7 +17,7 @@ https://github.com/eboye/HTC-OneX-CSS3/issues
 Demo
 -----------
 Also the demo could be found here:
-http://urban-design.org.uk/hoxcss3/
+https://eboye.github.io/HTC-OneX-CSS3/
 
 Copyright and license
 -----------
