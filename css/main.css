@@ -356,12 +356,11 @@ body:has(.phone:hover) .phone_shadow {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		/* Center when it fits; fall back to the top (never clip) when the
-		   phone is taller than the viewport. */
-		justify-content: safe center;
+		/* Top-anchor on mobile so the title sits near the top (no gap above). */
+		justify-content: flex-start;
 		gap: 4em;
 		min-block-size: 100svh;
-		padding: 6em 1em;
+		padding: 1.5em 1em 6em;
 		box-sizing: border-box;
 	}
 
