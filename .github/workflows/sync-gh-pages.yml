@@ -1,0 +1,28 @@
+name: Mirror master to gh-pages
+
+# Keeps the GitHub Pages deploy branch (gh-pages) identical to master.
+# Runs on GitHub for every push to master, so the live demo always
+# reflects master regardless of who pushed or from which machine.
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+# Avoid overlapping mirror runs racing on the gh-pages ref.
+concurrency:
+  group: mirror-gh-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Force gh-pages to match master
+        run: git push --force origin "HEAD:gh-pages"
