@@ -34,7 +34,7 @@ html {
 
 body {
 	/* Set on <body> so the gradient propagates to the viewport canvas. */
-	background: radial-gradient(ellipse at center, rgb(125 126 125) 0%, rgb(14 14 14) 100%);
+	background: radial-gradient(ellipse at center, var(--bg-center) 0%, var(--bg-edge) 100%);
 	background-size: 100% 100%;
 }
 
@@ -42,6 +42,15 @@ body {
    color-mix(), so the rest state matches the original exactly while the
    hover states reuse the same hue at a higher strength. */
 :root {
+	/* Default to the original dark "studio" look; light-dark() serves a
+	   tuned light variant to users whose OS prefers light. The device
+	   itself is unaffected — only the backdrop and copy adapt. */
+	color-scheme: dark light;
+
+	--bg-center: light-dark(#d8d8d8, rgb(125 126 125));
+	--bg-edge:   light-dark(#9a9a9a, rgb(14 14 14));
+	--ink:       light-dark(#141414, #ffffff);
+
 	--brand: #5fae37;
 	--hue-warm: #b1575c; /* rgb(177 87 92) */
 	--hue-cool: #99c7d6; /* rgb(153 199 214) */
@@ -295,7 +304,7 @@ body:has(.phone:hover) .phone_shadow {
 	font-size: 3em;
 	line-height: 1.2em;
 	font-weight: bold;
-	color: #fff;
+	color: var(--ink);
 }
 
 .buy {
