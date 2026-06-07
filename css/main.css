@@ -345,3 +345,49 @@ body:has(.phone:hover) .phone_shadow {
 		transform: none;
 	}
 }
+
+/* ==========================================================================
+   Responsive — narrow screens stack vertically with the title above the phone.
+   The desktop composition above is left untouched.
+   ========================================================================== */
+
+@media (max-width: 700px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* Center when it fits; fall back to the top (never clip) when the
+		   phone is taller than the viewport. */
+		justify-content: safe center;
+		gap: 4em;
+		min-block-size: 100svh;
+		padding: 6em 1em;
+		box-sizing: border-box;
+	}
+
+	/* Drop the desktop's viewport-anchored absolute positioning and flow
+	   normally. .phone stays positioned so its inner parts (volume rocker,
+	   camera) keep their coordinates. */
+	.info {
+		order: -1; /* title/info above the phone */
+		position: relative;
+		inset: auto;
+		margin: 0;
+		/* Desktop pins a fixed height; let it grow to its content in flow
+		   so the tagline/button don't overlap the phone below. */
+		block-size: auto;
+		max-inline-size: 100%;
+	}
+
+	.phone {
+		position: relative;
+		inset: auto;
+		margin: 0;
+	}
+
+	/* The ground shadow was placed for the desktop composition; on mobile
+	   the phone keeps its own glow without it. */
+	.phone_shadow {
+		display: none;
+	}
+}
