@@ -38,6 +38,19 @@ body {
 	background-size: 100% 100%;
 }
 
+/* Accent palette. Glow shadows are derived from the base hues with
+   color-mix(), so the rest state matches the original exactly while the
+   hover states reuse the same hue at a higher strength. */
+:root {
+	--brand: #5fae37;
+	--hue-warm: #b1575c; /* rgb(177 87 92) */
+	--hue-cool: #99c7d6; /* rgb(153 199 214) */
+	--glow-warm:        color-mix(in srgb, var(--hue-warm) 20%, transparent);
+	--glow-warm-strong: color-mix(in srgb, var(--hue-warm) 42%, transparent);
+	--glow-cool:        color-mix(in srgb, var(--hue-cool) 30%, transparent);
+	--glow-cool-strong: color-mix(in srgb, var(--hue-cool) 52%, transparent);
+}
+
 /* ==========================================================================
    The phone
    ========================================================================== */
@@ -54,7 +67,18 @@ body {
 	border-start-end-radius: 6em 5em;
 	border-end-start-radius: 7em 6em;
 	border-end-end-radius: 7em 6em;
-	box-shadow: 0 -2em 10em rgb(177 87 92 / 0.2);
+	box-shadow: 0 -2em 10em var(--glow-warm);
+	transition: transform 0.45s ease, box-shadow 0.45s ease;
+
+	/* Subtle lift + intensified glow on hover. */
+	&:hover {
+		transform: scale(1.015) translateY(-0.8em);
+		box-shadow: 0 -2.4em 13em var(--glow-warm-strong);
+
+		.body {
+			box-shadow: -2em 2em 13em var(--glow-cool-strong);
+		}
+	}
 
 	.volume_rocker {
 		position: absolute;
@@ -74,7 +98,8 @@ body {
 		background-color: #fbfbfb;
 		background-image: linear-gradient(to right, #fbfbfb, #eaeaea 20%, #ececec 76%, #e5e5e5 89%, #a9a9a9);
 		border-radius: 6em / 5em;
-		box-shadow: -2em 2em 10em rgb(153 199 214 / 0.3);
+		box-shadow: -2em 2em 10em var(--glow-cool);
+		transition: box-shadow 0.45s ease;
 	}
 
 	.body_noise {
@@ -221,6 +246,12 @@ body {
 	margin: 37.5em 0 0 -44em;
 	background-color: transparent;
 	box-shadow: 0 0 4em rgb(0 0 0 / 1);
+	transition: box-shadow 0.45s ease;
+}
+
+/* When the phone lifts, let its cast shadow spread and soften. */
+body:has(.phone:hover) .phone_shadow {
+	box-shadow: 0 0 6em rgb(0 0 0 / 0.9);
 }
 
 /* ==========================================================================
@@ -280,9 +311,28 @@ body {
 	border-radius: 1em;
 	background-image: linear-gradient(to top, #5fae37, #8fd058 95%, #d4eebe 95%, #8fd058, #d4eebe);
 	box-shadow: 0 0.3em 0.5em rgb(0 0 0 / 0.4);
+	transition: margin-block-start 0.2s ease, box-shadow 0.2s ease;
 
 	&:hover {
 		margin-block-start: -0.2em;
-		box-shadow: 0 0.5em 0.5em rgb(0 0 0 / 0.4);
+		/* Lift shadow + a soft glow tinted with the brand green. */
+		box-shadow:
+			0 0.5em 0.5em rgb(0 0 0 / 0.4),
+			0 0 1.4em color-mix(in srgb, var(--brand) 65%, transparent);
+	}
+}
+
+/* Honor users who prefer reduced motion: keep the visual emphasis,
+   drop the movement. */
+@media (prefers-reduced-motion: reduce) {
+	.phone,
+	.phone .body,
+	.phone_shadow,
+	.buy {
+		transition: none;
+	}
+
+	.phone:hover {
+		transform: none;
 	}
 }
